@@ -1053,6 +1053,7 @@
             for (var a in this.attrs) if (this.attrs[has](a)) {
                 res[a] = this.attrs[a];
             }
+            if ('rx' in res) res.r = res.rx;
             res.gradient && res.fill == "none" && (res.fill = res.gradient) && delete res.gradient;
             res.transform = this._.transform;
             return res;
